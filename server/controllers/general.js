@@ -5,6 +5,8 @@ import Transaction from "../models/Transaction.js";
 export const getUser = async (req, res) => {
   try {
     const { id } = req.params;
+    // highlight a variable, then Ctrl-Alt-L
+    // console.log("🚀 ~ file: general.js:8 ~ getUser ~ id", id)
     const user = await User.findById(id);
     res.status(200).json(user);
   } catch (error) {
